@@ -116,11 +116,26 @@ approval_checklist:
   content:
     prerequisites_verifiable: false
     assessment_strategy: ""
-    catalog_gap: ""
+    catalog_gap: "Extends the 'Image Mode is the best mode' lab with deeper coverage of day-2 operations — scheduled automatic updates, OpenSCAP CIS hardening workflows, firewall configuration, and sealed images — as a standalone ~2-hour experience for technical sellers, rather than bundled within a full-lifecycle lab."
     design_overview: ""
     module_summaries: []
-    rcars_overlap_pct: null
-    rcars_top_matches: []
+    rcars_overlap_pct: 98
+    rcars_top_matches:
+      - title: "Day 2 operations with image mode for Red Hat Enterprise Linux"
+        ci_name: "zt-rhelbu.zt-image-mode-day2.prod"
+        url: "https://catalog.demo.redhat.com/catalog?item=zt-rhelbu.zt-image-mode-day2.prod"
+        relevance_score: 98
+        why_it_fits: "Directly targets Day 2 operations for image mode RHEL (bootc), covering OS version switching, rollback, and containerized application deployment."
+      - title: "Image Mode is the best mode"
+        ci_name: "zt-rhelbu.zt-image-mode-rh1.prod"
+        url: "https://catalog.demo.redhat.com/catalog?item=zt-rhelbu.zt-image-mode-rh1.prod"
+        relevance_score: 90
+        why_it_fits: "Covers the full lifecycle including automatic updates, rollback, OpenSCAP/CIS hardening, firewall configuration, and containerized application deployment within the RHEL Image Mode (bootc) framework."
+      - title: "Building & Managing Self-contained Edge Appliances with Red Hat Image Mode and MicroShift"
+        ci_name: "published.edge-rhim-microshift.prod"
+        url: "https://catalog.demo.redhat.com/catalog?item=published.edge-rhim-microshift.prod"
+        relevance_score: 72
+        why_it_fits: "Covers atomic updates, rollback with bootc, OpenSCAP CIS hardening, and containerized application deployment within a RHEL Image Mode context, though focused on edge/MicroShift scenarios."
     rejections: []
 
   infra:
