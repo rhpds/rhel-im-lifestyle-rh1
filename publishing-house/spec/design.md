@@ -74,14 +74,14 @@ Intermediate
 
 ## Infrastructure Requirements
 
-- **Cloud provider:** TBD — confirmed in infrastructure phase
-- **Platform:** TBD — confirmed in infrastructure phase
-- **Topology:** TBD — confirmed in infrastructure phase
-- **Sizing:** TBD — confirmed in infrastructure phase
-- **Automation approach:** TBD — confirmed in infrastructure phase
-- **AI/MaaS:** TBD — confirmed in infrastructure phase
-- **External services:** TBD — confirmed in infrastructure phase
-- **Non-GA products:** TBD — confirmed in infrastructure phase
+- **Cloud provider:** CNV
+- **Platform:** RHEL VMs
+- **Topology:** Per-student
+- **Per student:** 1 RHEL 10 image-mode VM (2 vCPU, 4GB RAM, 30GB disk)
+- **Automation approach:** Ansible
+- **AI/MaaS:** None
+- **External services:** registry.redhat.io, cdn.redhat.com, github.com
+- **Non-GA products:** None (all products are GA)
 
 ## Assessment Strategy
 
