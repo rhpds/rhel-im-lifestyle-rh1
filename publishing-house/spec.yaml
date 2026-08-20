@@ -117,8 +117,22 @@ approval_checklist:
     prerequisites_verifiable: false
     assessment_strategy: ""
     catalog_gap: "Extends the 'Image Mode is the best mode' lab with deeper coverage of day-2 operations — scheduled automatic updates, OpenSCAP CIS hardening workflows, firewall configuration, and sealed images — as a standalone ~2-hour experience for technical sellers, rather than bundled within a full-lifecycle lab."
-    design_overview: ""
-    module_summaries: []
+    design_overview: "A hands-on zero-touch lab for Red Hat technical sellers and TAMs covering day-2 operational and security aspects of RHEL Image Mode. Participants configure automatic updates, perform rollbacks, apply CIS benchmarks with OpenSCAP, harden firewall rules, deploy containerized applications, and explore sealed images — going deeper on topics introduced in the earlier 'Image Mode is the best mode' lab."
+    module_summaries:
+      - title: "Introduction and Lab Orientation"
+        overview: "Orientation to the lab environment — connect to the web terminal, verify the image-mode baseline with bootc status, and review the lab structure."
+      - title: "System Updates and Automatic Scheduling"
+        overview: "Configure scheduled automatic updates for a RHEL image-mode system, trigger an update, reboot, and verify the system is running the new image version."
+      - title: "System Rollback"
+        overview: "Roll back to the previous image version after an update, reboot, and verify the system has been restored to its prior state."
+      - title: "Security Hardening with OpenSCAP"
+        overview: "Run a CIS compliance scan using OpenSCAP, review findings, remediate selected items, and re-scan to verify improved compliance."
+      - title: "Firewall Configuration"
+        overview: "Inspect firewalld state, add service and port rules, make rules permanent, and verify enforcement within the image-mode context."
+      - title: "Deploying Containerized Applications"
+        overview: "Pull and run a containerized application with Podman, verify accessibility, and generate a systemd service for persistence across reboots."
+      - title: "Sealed Images (Tentative)"
+        overview: "Explore sealed image configuration for fully immutable systems, verify immutability enforcement, and compare behavior to standard image mode."
     rcars_overlap_pct: 98
     rcars_top_matches:
       - title: "Day 2 operations with image mode for Red Hat Enterprise Linux"
