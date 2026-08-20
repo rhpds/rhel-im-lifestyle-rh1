@@ -21,8 +21,43 @@ project:
 
 spec:
   title: "RHEL Image Mode: Day-2 Operations and Security"
-  learning_objectives: []
-  modules: []              # [{id, title, duration_min}] — written by intake Phase 4; id is stable (e.g. module-01)
+  learning_objectives:
+    - "Configure automatic system updates for RHEL image-mode systems using scheduled update policies"
+    - "Implement system rollback to restore a previous image version after a failed or unwanted update"
+    - "Apply CIS security benchmarks to image-mode systems using OpenSCAP profiles"
+    - "Verify system compliance status against applied security hardening profiles"
+    - "Configure firewall rules within image-mode deployments using standard RHEL firewall tooling"
+    - "Deploy containerized applications on a RHEL image-mode host"
+    - "Explore sealed images for fully immutable system configurations (if feature is available)"
+  modules:
+    - id: module-01
+      title: "Introduction and Lab Orientation"
+      duration_min: 10
+      status: not_started
+    - id: module-02
+      title: "System Updates and Automatic Scheduling"
+      duration_min: 20
+      status: not_started
+    - id: module-03
+      title: "System Rollback"
+      duration_min: 15
+      status: not_started
+    - id: module-04
+      title: "Security Hardening with OpenSCAP"
+      duration_min: 25
+      status: not_started
+    - id: module-05
+      title: "Firewall Configuration"
+      duration_min: 15
+      status: not_started
+    - id: module-06
+      title: "Deploying Containerized Applications"
+      duration_min: 20
+      status: not_started
+    - id: module-07
+      title: "Sealed Images (Tentative)"
+      duration_min: 15
+      status: not_started
   environment:
     platform: ""               # ocp | rhel-vms — determines which sizing fields apply
     topology: ""               # shared-cluster | per-student | cnv-pool
@@ -79,7 +114,7 @@ tracking:
 approval_checklist:
 
   content:
-    prerequisites_verifiable: null
+    prerequisites_verifiable: false
     assessment_strategy: ""
     catalog_gap: ""
     design_overview: ""

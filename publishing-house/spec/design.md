@@ -1,89 +1,98 @@
-# [Project Title]
-
-<!-- This file is the design document for your lab or demo. -->
-<!-- Fill in each section below, or run /rhdp-publishing-house to have the intake skill help. -->
-<!-- Sections marked with [brackets] are placeholders — replace with real content. -->
-<!-- The validation gate checks for all required sections before submission. -->
+# RHEL Image Mode: Day-2 Operations and Security
 
 ## Overview
 
-[2-3 sentences on what this lab or demo is and why it exists. Then a direct description of what participants will do — specific enough that someone reading this section immediately understands the content without interpretation. No flowery language. Example: "Participants will deploy a 3-tier application on OpenShift, configure autoscaling, and troubleshoot a simulated pod failure."]
+This hands-on lab covers the day-2 operational and security aspects of Red Hat Enterprise Linux Image Mode. It extends the foundational concepts from the "Image Mode is the Best Mode" lab with a focus on ongoing maintenance, security hardening, and compliance workflows.
+
+Participants will configure automatic system updates and scheduling, perform system rollbacks, apply CIS security benchmarks using OpenSCAP, configure firewall rules, and deploy containerized applications — all within the image-mode lifecycle. If the feature is sufficiently mature, participants will also explore sealed images for immutable system configurations.
 
 ## Target Audience
 
-- **Role:** [Data scientists, platform engineers, developers, etc.]
-- **Experience level:** [Beginner, intermediate, or advanced]
-- **What they already know:** [Existing skills and knowledge]
-- **What they don't know:** [Skills this lab teaches]
+- **Role:** Red Hat technical sellers and Technical Account Managers — solutions architects, platform TAMs
+- **Experience level:** Intermediate
+- **What they already know:** RHEL system administration fundamentals, basic familiarity with containerized workflows, comfort with the command line
+- **What they don't know:** RHEL Image Mode day-2 operations — how to manage updates, rollbacks, security hardening, and application deployment in an image-based model
 
 ## Prerequisites
 
-- [What the learner must know or have completed before starting]
-- [Can the lab validate these automatically? Yes/No — brief explanation]
+- Basic RHEL system administration experience (managing packages, services, file systems)
+- Familiarity with container concepts (images, registries, Containerfiles)
+- No prior RHEL Image Mode experience required — the lab provides orientation
 
-<!-- If no prerequisites, write "None" -->
+Automated prerequisite validation: No — prerequisites are based on prior knowledge, not environment state.
 
 ## Learning Objectives
 
-1. [Action verb] [specific, measurable outcome]
-2. [Action verb] [specific, measurable outcome]
-3. [Action verb] [specific, measurable outcome]
-
-<!-- Scale to duration: up to 3 objectives per 45 min of content. Start with action verbs: Configure, Deploy, Create, Implement, Troubleshoot, Monitor, Scale. Each should be testable. NOT: Understand, Learn, Know. -->
+1. Configure automatic system updates for RHEL image-mode systems using scheduled update policies
+2. Implement system rollback to restore a previous image version after a failed or unwanted update
+3. Apply CIS security benchmarks to image-mode systems using OpenSCAP profiles
+4. Verify system compliance status against applied security hardening profiles
+5. Configure firewall rules within image-mode deployments using standard RHEL firewall tooling
+6. Deploy containerized applications on a RHEL image-mode host
+7. Explore sealed images for fully immutable system configurations (if feature is available)
 
 ## Content Type
 
-[Lab (hands-on) or Demo (presenter-led)]
+Lab (hands-on, zero-touch with solve/validate buttons)
 
 ## Products & Technologies
 
-- [Official Red Hat product name with version if relevant]
-- [Additional products/technologies]
-
-<!-- Use official names: "Red Hat OpenShift", not "OpenShift". List upstream projects separately. -->
+- Red Hat Enterprise Linux 10 (Image Mode)
+- bootc (boot container tooling)
+- OpenSCAP
+- Podman
 
 ## Module Map
 
 | Module | Title | Duration |
 |--------|-------|----------|
-| 1 | [Module title] | [XX min] |
-| 2 | [Module title] | [XX min] |
-| — | **Total hands-on** | **[X hours]** |
-| — | Intro / presentation | [~XX min] |
-| — | **Total lab** | **[~X hours]** |
+| 1 | Introduction and Lab Orientation | 10 min |
+| 2 | System Updates and Automatic Scheduling | 20 min |
+| 3 | System Rollback | 15 min |
+| 4 | Security Hardening with OpenSCAP | 25 min |
+| 5 | Firewall Configuration | 15 min |
+| 6 | Deploying Containerized Applications | 20 min |
+| 7 | Sealed Images (Tentative) | 15 min |
+| — | **Total hands-on** | **~2 hours** |
 
-<!-- Each module 10-30 min. Total: lab 1-4 hours, demo 15-45 min. Modules should build on each other. -->
+Module 7 (Sealed Images) is tentative — included if the feature reaches sufficient maturity. Without it, the lab runs approximately 1 hour 45 minutes.
 
 ## Difficulty Level
 
-[Beginner, Intermediate, or Advanced]
+Intermediate
 
 ## Environment
 
-**Learner view:** [What exists when the lab starts — pre-deployed resources, what participants see and interact with. Be specific about cluster details.]
+**Learner view:** A single RHEL 10 image-mode virtual machine, pre-provisioned and accessible via web terminal. The system is booted from a base RHEL image-mode container image with a container registry available for pulling updated images.
 
-**Automation needed:** [Yes/No]
+**Automation needed:** Yes
 
-[If yes, list what automation must provision — operators, per-user resources, sample apps, data sets.]
+- Initial RHEL image-mode VM provisioned via setup automation
+- Base container image pre-built and available in a registry
+- OpenSCAP packages and CIS profiles pre-installed or available
+- Sample containerized application image available for deployment module
 
 ## Infrastructure Requirements
 
-- **Cloud provider:** [CNV (default), AWS, or Troshka (bare-metal/nested virt)]
-- **Cluster type:** [Multinode or SNO (Single Node OpenShift)]
-- **OCP version:** [e.g. 4.20 — minimum 4.20]
-- **Topology:** [Shared cluster, per-student, or CNV pool]
-- **Sizing:** [Node types and counts with resources — e.g., "3 control plane (16 CPU, 64GB RAM), 6 workers (8 CPU, 32GB RAM, 100GB disk)"]
-- **Automation approach:** [Ansible, GitOps (Helm + ArgoCD), or combo]
-- **AI/MaaS:** [None, MaaS (open-source model), MaaS (frontier model), or dedicated GPU — include justification if not "none"]
-- **External services:** [Named services — e.g., github.com, registry.access.redhat.com — or "None"]
-- **AAP version:** [e.g. 2.5 — only if AAP is in products; omit otherwise]
-- **Non-GA products:** [Product name + version, with access plan — or "None (all products are GA)"]
+- **Cloud provider:** TBD — confirmed in infrastructure phase
+- **Platform:** TBD — confirmed in infrastructure phase
+- **Topology:** TBD — confirmed in infrastructure phase
+- **Sizing:** TBD — confirmed in infrastructure phase
+- **Automation approach:** TBD — confirmed in infrastructure phase
+- **AI/MaaS:** TBD — confirmed in infrastructure phase
+- **External services:** TBD — confirmed in infrastructure phase
+- **Non-GA products:** TBD — confirmed in infrastructure phase
 
-<!-- Not all fields must be known at intake. "TBD, estimating ~X" is fine. -->
+## Assessment Strategy
 
-## Assessment Strategy (Optional)
+Each module uses zero-touch solve/validate buttons:
 
-<!-- Optional — skip this section for demos or classic labs without verification. -->
-<!-- Relevant for Zero-Touch labs with solve/validate buttons or labs with automated checks. -->
-
-[If applicable: how will we know the learner successfully completed each module? Per module: verification script, solve/validate button, visible result in the UI, or automated check.]
+| Module | Validation approach |
+|--------|-------------------|
+| 1 — Introduction | No validation (orientation only) |
+| 2 — System Updates | Validate that automatic update schedule is configured and an update has been applied |
+| 3 — Rollback | Validate that the system has been rolled back to the previous image |
+| 4 — OpenSCAP | Validate that CIS profile scan has been run and results are available |
+| 5 — Firewall | Validate that specified firewall rules are active |
+| 6 — Containerized Apps | Validate that the application container is running and accessible |
+| 7 — Sealed Images | Validate sealed image configuration (if included) |
