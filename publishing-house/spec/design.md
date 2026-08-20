@@ -1,4 +1,4 @@
-# RHEL Image Mode: Day-2 Operations and Security
+# RHEL Image Mode Lifestyle, preparing for RHEL 11
 
 ## Overview
 
@@ -63,21 +63,22 @@ Intermediate
 
 ## Environment
 
-**Learner view:** A single RHEL 10 image-mode virtual machine, pre-provisioned and accessible via web terminal. The system is booted from a base RHEL image-mode container image with a container registry available for pulling updated images.
+**Learner view:** A RHEL 10 build host (package mode) accessible via web terminal, with nested virtualization enabled. An image-mode guest VM runs on the build host — participants perform lab exercises on the guest. A container registry is available for pulling and pushing bootc images.
 
 **Automation needed:** Yes
 
-- Initial RHEL image-mode VM provisioned via setup automation
-- Base container image pre-built and available in a registry
-- OpenSCAP packages and CIS profiles pre-installed or available
+- RHEL 10 build host provisioned via setup automation with nested virtualization enabled
+- Image-mode guest VM created and running on the build host
+- Base bootc container image pre-built and available in a registry
+- OpenSCAP packages and CIS profiles pre-installed or available on the guest
 - Sample containerized application image available for deployment module
 
 ## Infrastructure Requirements
 
-- **Cloud provider:** CNV
+- **Cloud provider:** Troshka (nested virtualization required)
 - **Platform:** RHEL VMs
 - **Topology:** Per-student
-- **Per student:** 1 RHEL 10 image-mode VM (2 vCPU, 4GB RAM, 30GB disk)
+- **Per student:** 1 RHEL 10 build host — package mode (4 vCPU, 16GB RAM, 100GB disk) with nested virtualization enabled, hosting an image-mode guest VM for lab exercises
 - **Automation approach:** Ansible
 - **AI/MaaS:** None
 - **External services:** registry.redhat.io, cdn.redhat.com, github.com
