@@ -3,30 +3,33 @@ kind: Component
 metadata:
   name: rhel-im-lifestyle-rh1
   title: rhel-im-lifestyle-rh1
-  description: Hands on lab, featuring some of the advanced, day-2, and security
-    tasks around RHEL Image Mode.
+  description: Hands on lab, featuring some of the advanced, day-2, and security tasks
+    around RHEL Image Mode.
   annotations:
     ph.rhdp.io/content-type: lab
-    ph.rhdp.io/deployment-mode: self_published
+    ph.rhdp.io/deployment-mode: rhdp_published
     ph.rhdp.io/github-user: nlager
     ph.rhdp.io/owner: nlager@redhat.com
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: rhpds/rhel-im-lifestyle-rh1
-    ph.rhdp.io/created-at: 2026-08-20T13:14:14.912Z
+    ph.rhdp.io/created-at: 2026-08-20 13:14:14.912000+00:00
   tags:
-    - publishing-house
-    - lab
-    - self-published
+  - publishing-house
+  - lab
+  - rhdp-published
   links:
-    - url: https://github.com/rhpds/rhel-im-lifestyle-rh1
-      title: Repository
-      icon: github
-    - url: https://devspaces.apps.ocpv-infra02.wdc07.infra.demo.redhat.com#https://github.com/rhpds/rhel-im-lifestyle-rh1
-      title: Open in DevSpaces
-      icon: catalog
-    - url: https://central-api-publishing-house.apps.ocpv-infra02.wdc07.infra.demo.redhat.com
-      title: Central
-      icon: dashboard
+  - url: https://github.com/rhpds/rhel-im-lifestyle-rh1
+    title: Repository
+    icon: github
+  - url: https://devspaces.apps.ocpv-infra02.wdc07.infra.demo.redhat.com#https://github.com/rhpds/rhel-im-lifestyle-rh1
+    title: Open in DevSpaces
+    icon: catalog
+  - url: https://central-api-publishing-house.apps.ocpv-infra02.wdc07.infra.demo.redhat.com
+    title: Central
+    icon: dashboard
+  - url: https://redhat.atlassian.net/browse/RHDPCD-1160
+    title: Jira Epic
+    icon: dashboard
 spec:
   type: content
   lifecycle: experimental

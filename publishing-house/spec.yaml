@@ -9,14 +9,14 @@ project:
   slug: "rhel-im-lifestyle-rh1"
   owner_email: "nlager@redhat.com"
   content_type: "lab"
-  deployment_mode: "self_published"
+  deployment_mode: "rhdp_published"
   initiative_key: "rh1_2027"
   showroom_type: "zero_touch"
   intake_type: "new"
   automation_type: "ansible"
   description: "Hands on lab, featuring some of the advanced, day-2, and security tasks around RHEL Image Mode."
   # content_reviewer_email and infra_reviewer_email are assigned by the RHDP team — not set by the author
-  jira_ticket: ""
+  jira_ticket: "RHDPCD-1160"
   workflow_id: "1c9f6d0b-63cd-466a-b56f-65383d556600"
 
 spec:
